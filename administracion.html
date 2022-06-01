@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/script.js" type="module" defer></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="encabezado">
+        <img src="./assets/logoconcesionario.svg" alt="logo" />
+
+        <nav>
+          <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Anuncios</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="./administracion.html">Administración</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <h1>Administración</h1>
+      <img src="./assets/concesionario.jpg" />
+    </header>
+
+    <main class="container">
+      <div class="form-container" id="form-container">
+        <form id="frmPrincipal">
+          <p>Información del anuncio</p>
+          <div class="form-group">
+            <input type="hidden" name="id" />
+            <label for="txtTitulo">Titulo:</label>
+            <input
+              type="text"
+              id="txtTitulo"
+              name="titulo"
+              placeholder="Título"
+              required
+            />
+
+            <fieldset>
+              <legend>Transaccion:</legend>
+              <label for="radioVenta">Venta</label>
+              <input type="radio" name="transaccion" value="Venta" checked />
+
+              <label for="radioAlquiler">Alquiler</label>
+              <input type="radio" name="transaccion" value="Alquiler" />
+            </fieldset>
+
+            <label for="txtDescripcion">Descripcion:</label>
+            <input
+              type="text"
+              id="txtDescripcion"
+              name="descripcion"
+              placeholder="Descripción"
+              required
+            />
+
+            <label for="txtPrecio">Precio:</label>
+            <input
+              type="number"
+              id="txtPrecio"
+              name="precio"
+              placeholder="Precio"
+              required
+              step="0.01"
+            />
+
+            <div class="caracteristicas-auto">
+              <img src="./assets/cardoor-icon.png" alt="" />
+              <label for="txtPuertas"></label>
+              <input
+                type="text"
+                id="txtPuertas"
+                name="cantPuertas"
+                placeholder="Puertas"
+                required
+              />
+
+              <img src="./assets/speedometer-icon.png" alt="" />
+              <label for="txtKilometros"></label>
+              <input
+                type="text"
+                id="txtKilometros"
+                name="cantKilometros"
+                placeholder="Kms"
+                required
+              />
+
+              <img src="./assets/engine-icon.png" alt="" />
+              <label for="txtPotencia"></label>
+              <input
+                type="text"
+                id="txtPotencia"
+                name="cantPotencia"
+                placeholder="Potencia"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="botonera-container">
+            <ul>
+              <li>
+                <a href="#" id="btnAgregar" class="btn btn-primary"
+                  ><i class="fa fa-floppy-o" aria-hidden="true"></i>Guardar</a
+                >
+              </li>
+              <li>
+                <a href="#" id="btnModificar" class="btn btn-primary"
+                  ><i class="fa fa-pencil" aria-hidden="true"></i
+                  >&nbsp;Modificar</a
+                >
+              </li>
+              <li>
+                <a href="#" id="btnCancelar" class="btn btn-primary"
+                  ><i class="fa fa-eraser" aria-hidden="true"></i
+                  >&nbsp;Cancelar</a
+                >
+              </li>
+              <li>
+                <a href="#" id="btnEliminar" class="btn btn-alert"
+                  ><i class="fa fa-minus" aria-hidden="true"></i
+                  >&nbsp;Eliminar</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div id="dynamicTable"></div>
+        </form>
+      </div>
+      <div id="spinner-container"></div>
+    </main>
+
+    <footer class="encabezado">
+      <p>Todos los derechos reservados Quimey Espinosa &copy;</p>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Anuncios</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="./administracion.html">Administración</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
